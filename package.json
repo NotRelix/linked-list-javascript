@@ -2,7 +2,8 @@
   "name": "linked-list-javascript",
   "version": "1.0.0",
   "description": "Linked List Implementation in JavaScript",
-  "main": "index.js",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint . --fix"
   },
