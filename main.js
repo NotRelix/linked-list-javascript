@@ -7,3 +7,4 @@ list.append("2");
 list.prepend("1");
 
 console.log(list.toString(list));
+console.log(list.size());

@@ -40,6 +40,16 @@ export class LinkedList {
     newNode.value = value;
     current.nextNode = newNode;
   }
+
+  size() {
+    let current = this.head;
+    let count = 0;
+    while (current != null) {
+      count++;
+      current = current.nextNode;
+    }
+    return count;
+  }
 }
 
 export class Node {
