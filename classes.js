@@ -3,6 +3,17 @@ export class LinkedList {
     this.head = null;
   }
 
+  toString() {
+    let current = this.head;
+    let str = "";
+    while (current !== null) {
+      str += `( ${current.value} ) -> `;
+      current = current.nextNode;
+    }
+    str += "null";
+    return str;
+  }
+
   append(value) {
     const newNode = new Node(value);
     if (this.head === null) {
