@@ -14,9 +14,22 @@ export class LinkedList {
     return str;
   }
 
-  append(value) {
-    const newNode = new Node(value);
+  prepend(value) {
+    const newNode = new Node();
     if (this.head === null) {
+      newNode.value = value;
+      this.head = newNode;
+      return;
+    }
+    newNode.value = value;
+    newNode.nextNode = this.head;
+    this.head = newNode;
+  }
+
+  append(value) {
+    const newNode = new Node();
+    if (this.head === null) {
+      newNode.value = value;
       this.head = newNode;
       return;
     }
@@ -24,13 +37,22 @@ export class LinkedList {
     while (current.nextNode !== null) {
       current = current.nextNode;
     }
+    newNode.value = value;
     current.nextNode = newNode;
   }
 }
 
 export class Node {
-  constructor(value) {
-    this.value = value;
+  constructor() {
+    this._value = null;
     this.nextNode = null;
+  }
+
+  get value() {
+    return this._value;
+  }
+
+  set value(value) {
+    this._value = value;
   }
 }

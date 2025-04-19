@@ -2,11 +2,8 @@ import { LinkedList } from "./classes.js";
 
 const list = new LinkedList();
 
-list.append("dog");
-list.append("cat");
-list.append("parrot");
-list.append("hamster");
-list.append("snake");
-list.append("turtle");
+list.prepend("0");
+list.append("2");
+list.prepend("1");
 
 console.log(list.toString(list));
